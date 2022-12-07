@@ -1,2 +1,5 @@
 rootProject.name = 'service'
 
+include 'fxx3344-remotepanel-project:remotepanel'
+findProject(':fxx3344-remotepanel-project:remotepanel')?.name = 'remotepanel'
+
