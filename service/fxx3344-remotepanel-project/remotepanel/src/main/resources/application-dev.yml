@@ -1,0 +1,19 @@
+server:
+  port: 30080
+spring:
+  datasource:
+    url: jdbc:h2:./data/rp;auto_server=true
+    driver-class-name: org.h2.Driver
+    username: root
+    password: a
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
