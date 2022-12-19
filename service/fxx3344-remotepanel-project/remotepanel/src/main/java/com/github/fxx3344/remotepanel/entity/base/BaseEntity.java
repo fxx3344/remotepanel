@@ -1,6 +1,6 @@
-package com.github.fxx3344.remotepanel.infrastructure.base;
+package com.github.fxx3344.remotepanel.entity.base;
 
-import com.github.fxx3344.remotepanel.infrastructure.security.entity.User;
+import com.github.fxx3344.remotepanel.entity.common.User;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -12,14 +12,14 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
- * description: EntityBase <br>
- * date: 2022/12/11 下午10:37 <br>
+ * description: BaseEntity <br>
+ * date: 2022/12/19 下午11:46 <br>
  * author: xi.feng <br>
  * version: 1.0 <br>
  */
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
-public class EntityBase {
+public abstract class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -98,7 +98,7 @@ public class EntityBase {
         if (this == o) return true;
         if(this.id == null) return false;
         if (o == null || getClass() != o.getClass()) return false;
-        EntityBase that = (EntityBase) o;
+        BaseEntity that = (BaseEntity) o;
         return Objects.equals(id, that.id);
     }
 

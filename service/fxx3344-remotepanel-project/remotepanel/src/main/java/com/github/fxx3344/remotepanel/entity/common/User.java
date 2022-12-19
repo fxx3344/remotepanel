@@ -1,19 +1,19 @@
-package com.github.fxx3344.remotepanel.infrastructure.security.entity;
+package com.github.fxx3344.remotepanel.entity.common;
 
-import com.github.fxx3344.remotepanel.infrastructure.base.EntityBase;
+import com.github.fxx3344.remotepanel.entity.base.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 /**
  * description: User <br>
- * date: 2022/12/11 下午10:35 <br>
+ * date: 2022/12/19 下午11:45 <br>
  * author: xi.feng <br>
  * version: 1.0 <br>
  */
 @Entity
 @Table(name = "sc_user")
-public class User extends EntityBase {
+public class User extends BaseEntity {
 
     @Column(length = 50, nullable = false, unique = true)
     private String identifier;
